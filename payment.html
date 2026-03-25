@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Payment - Kirana Store</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .payment-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 30px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .btn-pay {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+    .btn-pay:hover {
+        background-color: #218838;
+    }
+    .product-info {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<div class="container">
+<a class="navbar-brand" href="index.html">Kirana Store</a>
+
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="payment.html">Payment</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="container mt-5">
+<div class="payment-container">
+    <h2 class="text-center mb-4">Payment Details</h2>
+    
+    <div class="product-info">
+        <h5>Product: <span id="productName"></span></h5>
+    </div>
+    
+    <form id="paymentForm" onsubmit="processPayment(event)">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" class="form-control" id="name" required placeholder="Enter your full name">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone no.">Phone Number:</label>
+            <input type="phone no." class="form-control" id="phone.no" required placeholder="Enter your phone no.">
+        </div>
+        
+        <div class="form-group">
+
+
+            <div class="form-group">
+    <label for="address">Delivery Address:</label>
+    <textarea class="form-control" id="address" required
+    placeholder="Enter your delivery address"></textarea>
+</div>
+
+<div class="form-group">
+    <label for="paymentMethod">Payment Method:</label>
+    <select class="form-control" id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Debit Card</option>
+        <option>Credit Card</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <button type="submit" class="btn-pay">
+        Pay Now
+    </button>
+</div>

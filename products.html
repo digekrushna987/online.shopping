@@ -1,43 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Shopify</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>Products - Kirana Store</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .card {
+        transition: transform 0.3s;
+        margin-bottom: 20px;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .btn-buy {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .btn-buy:hover {
+        background-color: #218838;
+    }
+</style>
 </head>
+
 <body>
-    
-    <nav class="navbar">
-        <div class="nav-container container">
-            <a href="index.html" class="logo">🛍️ Shopify</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
-        </div>
-    </nav>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<div class="container">
+<a class="navbar-brand" href="index.html">Kirana Store</a>
+
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="payment.html">Payment</a></li>
+</ul>
+</div>
+</nav>
+
+<div class="container mt-5">
+<h2 class="text-center">All Products</h2>
+
+<div class="row">
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/rice image.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Rice</h6>
+<button class="btn-buy" onclick="buyProduct('Rice')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/sugar image.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Sugar</h6>
+<button class="btn-buy" onclick="buyProduct('Sugar')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/oil.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Oil</h6>
+<button class="btn-buy" onclick="buyProduct('Oil')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/wheat.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Wheat</h6>
+<button class="btn-buy" onclick="buyProduct('Wheat')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Toor Dal.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Toor Dal</h6>
+<button class="btn-buy" onclick="buyProduct('Toor Dal')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Moong Dal.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Moong Dal</h6>
+<button class="btn-buy" onclick="buyProduct('Moong Dal')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Chana Dal.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Chana Dal</h6>
+<button class="btn-buy" onclick="buyProduct('Chana Dal')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Urad dal.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Urad Dal</h6>
+<button class="btn-buy" onclick="buyProduct('Urad Dal')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Ghee.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Ghee</h6>
+<button class="btn-buy" onclick="buyProduct('Ghee')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Butter.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Butter</h6>
+<button class="btn-buy" onclick="buyProduct('Butter')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/tea paudar.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Tea Powder</h6>
+<button class="btn-buy" onclick="buyProduct('Tea Powder')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/coffee paudar.jpg" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Coffee Powder</h6>
+<button class="btn-buy" onclick="buyProduct('Coffee Powder')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/soap.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Soap</h6>
+<button class="btn-buy" onclick="buyProduct('Soap')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Shampoo.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Shampoo</h6>
+<button class="btn-buy" onclick="buyProduct('Shampoo')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Toothpaste.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Toothpaste</h6>
+<button class="btn-buy" onclick="buyProduct('Toothpaste')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Dishwash Liquid.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Dishwash Liquid</h6>
+<button class="btn-buy" onclick="buyProduct('Dishwash Liquid')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/All Noodles.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>All Noodles</h6>
+<button class="btn-buy" onclick="buyProduct('All Noodles')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/All Ketchup.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>All Ketchup</h6>
+<button class="btn-buy" onclick="buyProduct('All Ketchup')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/All Pickle.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>All Pickle</h6>
+<button class="btn-buy" onclick="buyProduct('All Pickle')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/All Jam.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>All Jam</h6>
+<button class="btn-buy" onclick="buyProduct('All Jam')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Cadbury.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Cadbury</h6>
+<button class="btn-buy" onclick="buyProduct('Cadbury')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Chips.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Chips</h6>
+<button class="btn-buy" onclick="buyProduct('Chips')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Cold Drink.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Cold Drink's</h6>
+<button class="btn-buy" onclick="buyProduct('Cold Drink')">Buy Now</button>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="card">
+<img src="imge/Ice Cream's.png" class="card-img-top" height="200">
+<div class="card-body text-center">
+<h6>Ice Cream's</h6>
+<button class="btn-buy" onclick="buyProduct('Ice Creams')">Buy Now</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="container mt-5">
+<h2 class="text-center">Our Products</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1586201375761-83865001e31c" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>Rice</h5>
+<button class="btn-buy" onclick="buyProduct('Rice')">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>Wheat Flour (Atta)</h5>
+<button class="btn-buy" onclick="buyProduct('Wheat Flour (Atta)')">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>Veg Snacks</h5>
+<button class="btn-buy" onclick="buyProduct('Veg Snacks')">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>Spices & Masala</h5>
+<button class="btn-buy" onclick="buyProduct('Spices & Masala')">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="https://images.unsplash.com/photo-1599490659213-e2b9527bd087" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>Chips</h5>
+<button class="btn-buy" onclick="buyProduct('Chips')">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card shadow">
+<img src="imge/Dairy Products.jpg" class="card-img-top" height="250">
+<div class="card-body text-center">
+<h5>All Products</h5>
+<button class="btn-buy" onclick="buyProduct('All Products')">Buy Now</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+function buyProduct(productName) {
    
-    <main class="main-content">
-        <div class="container">
-            <div style="text-align: center; padding: 3rem 0;">
-                <h1 style="font-size: 2.8rem; color: #667eea; margin-bottom: 1rem;">Our Products</h1>
-                <p style="font-size: 1.2rem; color: #666;">Browse our amazing collection of products</p>
-            </div>
-            
-            <div class="products-grid"></div>
-        </div>
-    </main>
+    const encodedProduct = encodeURIComponent(productName);
+   
+    window.location.href = `payment.html?product=${encodedProduct}`;
+}
+</script>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
